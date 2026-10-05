@@ -10,7 +10,7 @@
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="kith. bostanlı">
 <meta property="og:description" content="your daily routine. Menümüze göz atın.">
-<meta property="og:url" content="https://kithbostanli.com/">
+<!-- og:image eklemek isterseniz: <meta property="og:image" content="https://SITE-ADRESINIZ/og.jpg"> (1200x630) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffe6bb'/%3E%3Ctext x='32' y='47' font-size='44' font-weight='900' text-anchor='middle' fill='%23cb2622' font-family='sans-serif'%3Ek.%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://use.typekit.net" crossorigin>
 <link rel="preconnect" href="https://p.typekit.net" crossorigin>
@@ -83,10 +83,11 @@ ul.items+h4{margin-top:1.5rem}
 /* footer */
 footer{margin-top:auto;background:var(--black);color:var(--beige);border-top:8px solid var(--red)}
 .foot{max-width:80rem;margin:0 auto;padding:3rem 1.5rem calc(3rem + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:2rem;text-align:center}
-address,.updated{font-weight:700;font-size:.875rem;line-height:1.625;letter-spacing:.1em;text-transform:uppercase}
+address{font-weight:700;font-size:.875rem;line-height:1.625;letter-spacing:.1em;text-transform:uppercase}
 address a{border-bottom:2px solid transparent;transition:border-color .2s}
 address a:hover,address a:focus-visible{border-color:var(--red)}
-.updated{margin-top:1rem;font-size:.75rem;opacity:.8}
+.updated{margin-top:.5rem;padding:0 1.25rem;font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.updated time{color:var(--red)}
 .social-col{display:flex;flex-direction:column;align-items:center;gap:1.5rem}
 .social{display:flex;gap:2rem}
 .social a{color:var(--red);transition:color .2s;line-height:0}
@@ -109,6 +110,7 @@ address a:hover,address a:focus-visible{border-color:var(--red)}
   h4,.name,.price{font-size:1rem}
   .desc,.cat-note{font-size:.75rem}
   .allergen{padding:1.5rem;font-size:.875rem}
+  .updated{padding:0 1.5rem;font-size:.875rem}
   .foot{padding-left:2.5rem;padding-right:2.5rem}
   address{font-size:1rem}
   #top{right:1.5rem;bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))}
@@ -146,6 +148,7 @@ address a:hover,address a:focus-visible{border-color:var(--red)}
     <strong>Alerjen Uyarısı:</strong>
     <span>Menümüzdeki ürünler gluten, süt ve süt ürünleri, yumurta ve kuruyemiş (ceviz vb.) içerebilir ya da bu ürünlerle aynı hatta üretilmiştir. Çapraz bulaşma riskinden dolayı hassasiyeti olan misafirlerimizin sipariş verirken ekibimizi bilgilendirmesini rica ederiz.</span>
   </div>
+  <p class="updated reveal">Fiyat Güncelleme Tarihi: <time id="updated"></time></p>
 </main>
 
 <footer class="reveal">
@@ -156,7 +159,6 @@ address a:hover,address a:focus-visible{border-color:var(--red)}
           Bostanlı, 2010. Sk.<br>No:3 D:3E<br>35590 Karşıyaka/İzmir
         </a>
       </address>
-      <p class="updated">Fiyat Güncelleme Tarihi: <time id="updated"></time></p>
     </div>
     <div class="social-col">
       <div class="social">
