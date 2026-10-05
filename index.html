@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kith. bostanlı</title>
+<meta name="description" content="kith. bostanlı menü: kahveler, çaylar, tatlılar, sandviçler, ekşi maya ekmekler ve kahvaltılar.">
+<meta name="theme-color" content="#ffe6bb">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="kith. bostanlı">
+<meta property="og:description" content="your daily routine. Menümüze göz atın.">
+<!-- og:image eklemek isterseniz: <meta property="og:image" content="https://SITE-ADRESINIZ/og.jpg"> (1200x630) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffe6bb'/%3E%3Ctext x='32' y='47' font-size='44' font-weight='900' text-anchor='middle' fill='%23cb2622' font-family='sans-serif'%3Ek.%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+<link rel="preconnect" href="https://p.typekit.net" crossorigin>
+<link rel="stylesheet" href="https://use.typekit.net/vfh3aol.css">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{--red:#cb2622;--beige:#ffe6bb;--black:#0a0a0a}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body,h1,h2,h3,h4,p,ul,address{margin:0;padding:0}
+ul{list-style:none}
+address{font-style:normal}
+a{color:inherit;text-decoration:none}
+body{
+  min-height:100vh;display:flex;flex-direction:column;
+  background-color:var(--beige);
+  background-image:radial-gradient(rgba(10,10,10,.15) 1.5px,transparent 1.5px);
+  background-size:24px 24px;
+  color:var(--black);
+  font-family:'termina',sans-serif;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+::selection{background:var(--red);color:var(--beige)}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--beige)}
+::-webkit-scrollbar-thumb{background:var(--black)}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+@keyframes snapUp{from{transform:translateY(20px);opacity:0}to{transform:none;opacity:1}}
+.anim{animation:snapUp .3s cubic-bezier(0,0,0,1) both;animation-delay:var(--d,0s)}
+.js .reveal{opacity:0}
+.js .reveal.in{animation:snapUp .3s cubic-bezier(0,0,0,1) forwards}
+@media (prefers-reduced-motion:reduce){
+  .anim,.js .reveal.in{animation:none}
+  .js .reveal{opacity:1}
+}
+
+/* header */
+header{padding:5rem 1.5rem 3rem}
+.brand{max-width:80rem;margin:0 auto;display:flex;justify-content:center}
+.brand>div{display:flex;flex-direction:column;align-items:flex-start}
+h1{color:var(--red);font-weight:900;text-transform:lowercase;line-height:.85;font-size:clamp(6.5rem,28vw,14rem)}
+h2{color:var(--red);font-weight:700;text-transform:lowercase;margin-top:.25rem;font-size:clamp(1.2rem,5.2vw,2.75rem)}
+
+/* layout */
+main{flex-grow:1;width:100%;max-width:80rem;margin:0 auto;padding:1rem 1.5rem}
+.grid{display:grid;grid-template-columns:1fr;gap:2.5rem}
+.cat{display:flex;flex-direction:column;height:100%;padding:1rem;background:var(--beige)}
+.cat-head{border-bottom:4px solid var(--black);padding-bottom:.75rem;margin-bottom:1.5rem}
+h3{color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:-.025em;line-height:1;font-size:1.1rem}
+.cat-note{margin-top:.5rem;font-size:.6875rem;font-weight:700;opacity:.7;text-transform:uppercase;letter-spacing:.05em}
+h4{color:var(--red);font-weight:700;font-size:.875rem;text-transform:uppercase;letter-spacing:.05em;margin:.5rem 0 1.5rem}
+h4:not(:first-child){margin-top:1.5rem}
+ul.items{display:flex;flex-direction:column;gap:1.25rem}
+ul.items+h4{margin-top:1.5rem}
+
+/* rows */
+.row{display:flex;align-items:flex-end;width:100%}
+.name{min-width:0;font-weight:700;font-size:.875rem;line-height:1.25}
+.leader{flex:1 1 1rem;min-width:1rem;margin:0 12px;border-bottom:3px dotted var(--black);position:relative;top:-6px}
+.price{flex-shrink:0;white-space:nowrap;font-weight:700;font-size:.875rem}
+.desc{display:block;margin-top:.25rem;padding-right:1rem;font-size:.6875rem;font-weight:700;line-height:1.625;opacity:.7;text-transform:uppercase;letter-spacing:.05em}
+
+.allergen{margin-top:3.5rem;padding:1.25rem;font-size:.75rem;line-height:1.625}
+.allergen strong{display:block;margin-bottom:.5rem;color:var(--red);text-transform:uppercase;letter-spacing:.05em}
+.allergen span{opacity:.8}
+.nojs{padding:1.5rem;font-weight:700}
+
+/* footer */
+footer{margin-top:auto;background:var(--black);color:var(--beige);border-top:8px solid var(--red)}
+.foot{max-width:80rem;margin:0 auto;padding:3rem 1.5rem calc(3rem + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:2rem;text-align:center}
+address,.updated{font-weight:700;font-size:.875rem;line-height:1.625;letter-spacing:.1em;text-transform:uppercase}
+address a{border-bottom:2px solid transparent;transition:border-color .2s}
+address a:hover,address a:focus-visible{border-color:var(--red)}
+.updated{margin-top:1rem;font-size:.75rem;opacity:.8}
+.social-col{display:flex;flex-direction:column;align-items:center;gap:1.5rem}
+.social{display:flex;gap:2rem}
+.social a{color:var(--red);transition:color .2s;line-height:0}
+.social a:hover,.social a:focus-visible{color:var(--beige)}
+.social svg{width:2.25rem;height:2.25rem}
+.copy{font-size:.75rem;font-weight:900;letter-spacing:.1em;text-transform:lowercase}
+
+/* back to top */
+#top{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));width:3rem;height:3rem;display:flex;align-items:center;justify-content:center;background:var(--red);color:var(--beige);border:0;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s,transform .2s,visibility .2s}
+#top.show{opacity:1;visibility:visible;transform:none}
+#top svg{width:1.5rem;height:1.5rem}
+@media (prefers-reduced-motion:reduce){#top{transition:none}}
+
+@media (min-width:400px){h3{font-size:1.25rem}}
+@media (min-width:640px){
+  header{padding:7rem 3rem 3rem}
+  main{padding:1rem 3rem}
+  .cat{padding:1.25rem}
+  h3{font-size:1.5rem}
+  h4,.name,.price{font-size:1rem}
+  .desc,.cat-note{font-size:.75rem}
+  .allergen{padding:1.5rem;font-size:.875rem}
+  .foot{padding-left:2.5rem;padding-right:2.5rem}
+  address{font-size:1rem}
+  #top{right:1.5rem;bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))}
+}
+@media (min-width:768px){
+  header{padding:9rem 4rem 3rem}
+  main{padding:1rem 4rem}
+  .grid{gap:3.5rem}
+  .foot{flex-direction:row;padding-top:4rem;padding-bottom:calc(4rem + env(safe-area-inset-bottom,0px));padding-left:3rem;padding-right:3rem;text-align:left}
+  .social-col{align-items:flex-end}
+}
+@media (min-width:1024px){
+  header{padding-left:6rem;padding-right:6rem}
+  main{padding:1rem 6rem}
+  .grid{grid-template-columns:1fr 1fr}
+  .cat.wide{grid-column:span 2}
+  .cat.wide ul.items{display:grid;grid-template-columns:1fr 1fr;column-gap:2.5rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand"><div>
+    <h1 class="anim">kith.</h1>
+    <h2 class="anim" style="--d:.1s">your daily routine.</h2>
+  </div></div>
+</header>
+
+<main>
+  <noscript><p class="nojs">Menüyü görüntülemek için lütfen tarayıcınızda JavaScript'i etkinleştirin.</p></noscript>
+  <div class="grid" id="menu"></div>
+
+  <div class="allergen reveal">
+    <strong>Alerjen Uyarısı:</strong>
+    <span>Menümüzdeki ürünler gluten, süt ve süt ürünleri, yumurta ve kuruyemiş (ceviz vb.) içerebilir ya da bu ürünlerle aynı hatta üretilmiştir. Çapraz bulaşma riskinden dolayı hassasiyeti olan misafirlerimizin sipariş verirken ekibimizi bilgilendirmesini rica ederiz.</span>
+  </div>
+</main>
+
+<footer class="reveal">
+  <div class="foot">
+    <div>
+      <address>
+        <a href="https://maps.app.goo.gl/uyo1cB3s5dg4Lmtx7" target="_blank" rel="noopener noreferrer" aria-label="Adresi Google Haritalar'da aç">
+          Bostanlı, 2010. Sk.<br>No:3 D:3E<br>35590 Karşıyaka/İzmir
+        </a>
+      </address>
+      <p class="updated">Fiyat Güncelleme Tarihi: <time id="updated"></time></p>
+    </div>
+    <div class="social-col">
+      <div class="social">
+        <a href="https://www.instagram.com/kithbostanli" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@kith.bostanli" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3v11.5a4.5 4.5 0 1 1-4.5-4.5"/><path d="M15 3c.3 2.6 2 4.5 5 4.7"/></svg>
+        </a>
+      </div>
+      <div class="copy">&copy; 2026 kith. bostanlı</div>
+    </div>
+  </div>
+</footer>
+
+<button id="top" type="button" aria-label="Sayfanın başına dön">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M12 20V5M5 11l7-7 7 7"/></svg>
+</button>
+
+<script>
+/* ===== FİYAT GÜNCELLEME TARİHİ: [ISO, görünen] ===== */
+const UPDATED = ['2026-10-04', '04.10.2026'];
+
+/* ===== MENÜ VERİSİ =====
+   Ürün: [isim, fiyat(TL), açıklama(opsiyonel)]
+   Fiyat değiştirmek için sadece sayıyı düzenleyin. */
+const SYRUPS = '(Karamel, Fındık, Badem, Vanilya, Coconut, Bal, Antep Fıstığı, Kırmızı Meyveler, Turunç, Frambuaz, Lavanta, Balkabağı, Cookie, Nane ve Misket Limon)';
+
+const MENU = [
+  { title: 'Sıcak İçecekler', groups: [
+    { h: 'Kahveler', items: [
+      ['Espresso', 160], ['Americano', 190], ['Latte', 220],
+      ['Latte (şurup ilavesi)', 250, SYRUPS],
+      ['Cortado', 220], ['Flat White', 220], ['Filtre Kahve', 200], ['V-60', 250],
+      ['Cold Brew', 250], ['Mocha', 250], ['White Chocolate Mocha', 250],
+      ['Türk Kahvesi', 140], ['Double Türk Kahvesi', 190], ['Damla Sakız Türk Kahvesi', 150],
+      ['Matcha Latte', 250], ['Strawberry Matcha Latte', 280], ['Sıcak Çikolata', 220], ['Sahlep', 190]
+    ]},
+    { h: 'Çaylar', items: [
+      ['Bardak Çay', 60], ['Fincan Çay', 90], ['Chai Tea Latte', 250],
+      ['Bitki Çayları', 180, '(Mandala, Şeftali, Beyaz Çay, Meditasyon, Bahar, Hibiskus, Earl Grey, Detoks Yeşil Çay, Kuşburnu, Böğürtlen, Noel, Yasemin, Yeşil Çay)']
+    ]}
+  ]},
+  { title: 'Soğuk İçecekler', groups: [
+    { h: 'Kahveler', items: [
+      ['Ice Americano', 190], ['Ice Espresso', 160], ['Ice Flat White', 220], ['Affogato', 250],
+      ['Ice Cortado', 220], ['Ice Filtre Kahve', 200], ['Ice Mocha', 250], ['Ice White Chocolate Mocha', 250],
+      ['Ice Latte', 230], ['Ice Latte (şurup ilavesi)', 260, SYRUPS]
+    ]},
+    { h: 'Diğer', items: [
+      ['Milkshake', 250],
+      ['Smoothie', 300, '(Yabanmersini, Bal, Muz, Süt, Ananas, Limon, Yeşil Elma)'],
+      ['Frappe', 250], ['Sakura', 250], ['Limonata', 200], ['Çilekli Limonata', 250], ['Sıkma Portakal Suyu', 180],
+      ['Kith Mix', 300, '(Günün karışımı için bize sorun)'],
+      ['Frutti Extra Mandalina', 140], ['Frutti Extra Yeşil Limon', 140],
+      ['Soğuk Çaylar', 200, '(Çeşitler için bize danışabilirsiniz)'],
+      ['Soğuk Bitki Çayları', 250, '(Kuşburnu, Böğürtlen, Mandala, Passion Guava, Orange Mango)'],
+      ['Ice Matcha Latte', 280], ['Ice Strawberry Matcha', 290], ['Ice Chai Tea Latte', 260],
+      ['Soda', 90], ['Gazoz', 90], ['Churchill', 150], ['Su', 40]
+    ]}
+  ]},
+  { title: 'Tatlılar', groups: [{ items: [
+    ['Cheesecake', 300, '(Bugün neler var bize sorun)'], ['Brownie', 300], ['Tiramisu', 250], ['San Sebo', 350],
+    ['Cookie', 160], ['Donut', 125], ['Magnolya', 250], ['Supangle', 200],
+    ['Mini Pasta', 250, '(Bugün neler var bize sorun)']
+  ]}]},
+  { title: 'Atıştırmalıklar', groups: [{ items: [
+    ['Tuzlu Kek', 100, 'Yeşil Zeytin, Taze Maydanoz, Taze Soğan, Tulum'],
+    ['Labneli Çörek', 140, 'Tereyağlı Çörek Hamuru, Taze Soğanlı Labne, Çeri Domates, Fırından çıkınca zeytinyağı'],
+    ['Mantar & Beşamel Çörek', 140, 'Tereyağlı Çörek Hamuru, Beşamel Sos, Mantar, Fırından çıkınca zeytinyağı'],
+    ['Siyez Poğaça', 120, 'Siyez Unlu, Tereyağlı Hamur, içinde labne dolgusu'],
+    ['Sarımsaklı Çörek', 160, 'Tereyağlı Çörek Hamuru, içinde Lorlu Peynir dolgusu, Fırından çıkınca sarımsaklı taze maydanozlu tereyağ']
+  ]}]},
+  { title: 'Soğuk Sandviçler', note: 'Ekşi mayalı ciabatta ekmeği ile birlikte.', groups: [{ items: [
+    ['Hindi Fümeli', 240, 'Labne, Hindi Füme, Tulum Peyniri, Roka'],
+    ['Pesto Soslu', 220, 'Pesto Sos, Mozzarella, Domates, Roka'],
+    ['Dana Fümeli', 260, 'Labne, Dana Füme, Domates, Roka'],
+    ['Sebzelim', 230, 'Zeytin Ezmesi, Köz Sebze, Ceviz, Roka'],
+    ['Kruvasan Sandviç', 300]
+  ]}]},
+  { title: 'Ekşi Maya Ekmekler', groups: [{ items: [
+    ['Cevizli Köy Ekmeği', 180], ['Siyez Unlu Ekmek', 160], ['Sade Köy Ekmeği', 160],
+    ['Zeytinli, Kekikli Köy Ekmeği', 180], ['Kuru Domatesli Biberiyeli Köy Ekmeği', 180]
+  ]}]},
+  { title: 'Kahvaltılar', wide: true, groups: [{ items: [
+    ['Ekmeküstü No: 1 Avokado', 400, 'Ekşi Maya Tam Tahıllı Ekmek üstüne Krem Peynir, Parmesan ve Keten Tohumuyla Çırpılmış 2 Adet Yumurta ve Avokado; yanında Domates, Marul ve Mini Yulaf Kase'],
+    ['Ekmeküstü No: 2 Kuru Domates', 380, 'Ekşi Maya Tam Tahıllı Ekmek üstüne Pesto Sos, Hellim Peyniri ve Keten Tohumu ile Çırpılmış 2 Adet Yumurta ve Kuru Domates; yanında Domates, Marul ve Mini Yulaf Kase'],
+    ['Ekmeküstü No: 3 Sosisli', 500, 'Ekşi Maya Tam Tahıllı Ekmek üstüne Krem Peynir, Keten Tohumu ile Çırpılmış 2 Adet Yumurta, Kasap Sosis ve Cheddar; yanında Domates, Marul ve Mini Yulaf Kase'],
+    ['Ekmeküstü No: 4', 350, 'Ekşi Maya Köy Ekmeği üzerine Krem Peynir, Hindi Füme, 1 Adet Çırpılmış Yumurta'],
+    ['Ekmeküstü No: 5', 300, 'Ekşi Maya Köy Ekmeği üzerine Avokado Sos, Krem Peynir, 1 Adet Çırpılmış Yumurta, Rende Parmesan'],
+    ['Yulaf Kase', 300, 'Bitkisel Süt ile Yumuşatılmış, Balla veya Pekmezle tatlandırılmış Yulaf, üstüne Keten Tohumu, Mevsim Meyveleri, Granola Taneleri, Badem, Ceviz'],
+    ['Simit Tabağı', 300, 'Krem peyniri, Tulum Peyniri, Zeytin, Reçel, Bal, Yumurta (Haşlanmış, Göz ya da Çırpılmış), Domates, Salatalık'],
+    ['Kapris Kahvaltı Tabağı', 450, 'Caprese Salata (Mozzarella ve Domates), Çırpılmış 2 Adet Yumurta, Kuru Domates, Salatalık, Zeytin, Marul, Yanında Mini Yulaf Kase'],
+    ['Kruvasanlı Mini Kahvaltı', 450, '2 Adet Kruvasan, Krem Peyniri, Nutella, Vişne Reçeli, Mevsim Meyveleri ve Zeytinli Salata'],
+    ['Pratik Kahvaltı', 250, 'Ekşi Maya Köy Ekmeği üzerine 1 Adet Göz Yumurta, Tereyağ, Tulum Peyniri, Reçel'],
+    ['Çılbır', 300, '2 Adet Poşe Yumurta, Sarımsaklı Yoğurt, Kırmızı Yağ, 1 Dilim Ekşi Maya Köy Ekmeği, Keten Tohumu, Maydanoz']
+  ]}]}
+];
+
+/* ===== RENDER ===== */
+const row = ([n, p, d]) =>
+  `<li><div class="row"><span class="name">${n}</span><span class="leader" aria-hidden="true"></span><span class="price">${p}\u00a0TL</span></div>${d ? `<span class="desc">${d}</span>` : ''}</li>`;
+
+document.getElementById('menu').innerHTML = MENU.map(s => `
+  <section class="cat reveal${s.wide ? ' wide' : ''}">
+    <div class="cat-head"><h3>${s.title}</h3>${s.note ? `<p class="cat-note">${s.note}</p>` : ''}</div>
+    ${s.groups.map(g => `${g.h ? `<h4>${g.h}</h4>` : ''}<ul class="items">${g.items.map(row).join('')}</ul>`).join('')}
+  </section>`).join('');
+
+const t = document.getElementById('updated');
+t.dateTime = UPDATED[0]; t.textContent = UPDATED[1];
+
+/* ===== SCROLL REVEAL ===== */
+const els = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver((es) => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: 0.05 });
+  els.forEach(el => io.observe(el));
+} else {
+  els.forEach(el => el.classList.add('in'));
+}
+
+/* ===== BACK TO TOP ===== */
+const topBtn = document.getElementById('top');
+addEventListener('scroll', () => topBtn.classList.toggle('show', scrollY > 600), { passive: true });
+topBtn.addEventListener('click', () => scrollTo({ top: 0 }));
+</script>
+</body>
+</html>
