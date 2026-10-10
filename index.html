@@ -185,33 +185,34 @@ const UPDATED = ['2026-10-04', '04.10.2026'];
 /* ===== MENÜ VERİSİ =====
    Ürün: [isim, fiyat(TL), açıklama(opsiyonel)]
    Fiyat değiştirmek için sadece sayıyı düzenleyin. */
-const SYRUPS = '(Karamel, Fındık, Badem, Vanilya, Coconut, Bal, Antep Fıstığı, Kırmızı Meyveler, Turunç, Frambuaz, Lavanta, Balkabağı, Cookie, Nane ve Misket Limon)';
+const SYRUPS = '(Karamel, Fındık, Badem, Vanilya, Coconut, Bal, Antep Fıstığı, Kırmızı Meyveler, Turunç, Frambuaz, Lavanta, Balkabağı, Cookie, Nane ve Misket Limon)(Bitkisel süt +50TL';
 
 const MENU = [
   { title: 'Sıcak İçecekler', groups: [
     { h: 'Kahveler', items: [
-      ['Espresso', 160], ['Americano', 190], ['Latte', 220],
-      ['Latte (şurup ilavesi)', 250, SYRUPS],
-      ['Cortado', 220], ['Flat White', 220], ['Filtre Kahve', 200], ['V-60', 250],
-      ['Cold Brew', 250], ['Mocha', 250], ['White Chocolate Mocha', 250],
+      ['Espresso', 160], ['Americano', 190], ['Filtre Kahve', 200], ['V-60', 250],
       ['Türk Kahvesi', 140], ['Double Türk Kahvesi', 190], ['Damla Sakız Türk Kahvesi', 150],
-      ['Matcha Latte', 250], ['Strawberry Matcha Latte', 280], ['Sıcak Çikolata', 220], ['Sahlep', 190]
+      ['Cortado', 220], ['Flat White', 220],  ['Mocha', 250], ['White Chocolate Mocha', 250],
+      ['Latte', 220],
+      ['Latte with', 250, SYRUPS],      
+       ['Sıcak Çikolata', 220], ['Sahlep', 190]
     ]},
     { h: 'Çaylar', items: [
       ['Bardak Çay', 60], ['Fincan Çay', 90], ['Chai Tea Latte', 250],
-      ['Bitki Çayları', 180, '(Mandala, Şeftali, Beyaz Çay, Meditasyon, Bahar, Hibiskus, Earl Grey, Detoks Yeşil Çay, Kuşburnu, Böğürtlen, Noel, Yasemin, Yeşil Çay)']
+      ['Bitki Çayları', 180, '(Mandala, Şeftalili Beyaz Çay, Meditasyon Bahar, Hibiskus, Earl Grey, Detoks Yeşil Çay, Kuşburnu Böğürtlen, Noel, Yasemin İncileri Yeşil Çay)']
+      ['Matcha Latte', 250], ['Strawberry Matcha Latte', 280],    
     ]}
   ]},
   { title: 'Soğuk İçecekler', groups: [
     { h: 'Kahveler', items: [
-      ['Ice Americano', 190], ['Ice Espresso', 160], ['Ice Flat White', 220], ['Affogato', 250],
-      ['Ice Cortado', 220], ['Ice Filtre Kahve', 200], ['Ice Mocha', 250], ['Ice White Chocolate Mocha', 250],
-      ['Ice Latte', 230], ['Ice Latte (şurup ilavesi)', 260, SYRUPS]
+      ['Ice Espresso', 160], ['Ice Americano', 190], ['Ice Filtre Kahve', 200], ['Cold Brew', 250], ['Affogato', 250], ['Ice Cortado', 220],
+      ['Ice Flat White', 220], ['Ice Mocha', 250], ['Ice White Chocolate Mocha', 250], ['Frappe', 240], 
+      ['Ice Latte', 230], ['Ice Latte with', 260, SYRUPS]
     ]},
     { h: 'Diğer', items: [
-      ['Milkshake', 250],
-      ['Smoothie', 300, '(Yabanmersini, Bal, Muz, Süt, Ananas, Limon, Yeşil Elma)'],
-      ['Frappe', 250], ['Sakura', 250], ['Limonata', 200], ['Çilekli Limonata', 250], ['Sıkma Portakal Suyu', 180],
+      ['Milkshake (Ice Chocolate)', 250],
+      ['Smoothie', 300, '(Yabanmersini, Bal-Muz-Süt, Ananas-Limon-Yeşil Elma)'],
+      ['Frappe', 250], ['Sakura', 250], ['Limonata', 200], ['Çilekli Limonata', 250], ['Sıkma Portakal Suyu', 150],
       ['Kith Mix', 300, '(Günün karışımı için bize sorun)'],
       ['Frutti Extra Mandalina', 140], ['Frutti Extra Yeşil Limon', 140],
       ['Soğuk Çaylar', 200, '(Çeşitler için bize danışabilirsiniz)'],
